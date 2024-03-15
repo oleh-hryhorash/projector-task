@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link class="pre_logo" rel="shortcut icon" href="img/cart-prelogo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Projector task Oleh Hryhorash</title>
+</head>
+<body>
+    
+    <div class="container">
+    <!--Navigation-->
+      <nav>
+        <a id="backButton">
+        <div class="nav__back-section">
+        <img class="back_icon" src="img/back.png" alt="">
+        <h3>BACK</h3>
+        </div>
+    </a>
+        <div class="nav__icon-section">
+            <img class="icon" src="img/heart-shape-outline.png" alt="" class="nav_img">
+            <img class="icon" src="img/file-and-folder.png" alt="" class="nav_img">
+        </div>
+      </nav>
+
+        <!--Functional block-->
+        <div class="container__functions">
+        <div class="functions">
+            <div class="function__artist  animate__animated animate__fadeInUp">
+                <input class="artist__input" type="text" id="artistInput" placeholder="Artist">
+                <div id="lengthWarning" class="hidden">Ви перевищили максимальну кількість символів - 50.</div>
+
+                <!--
+                <form>
+                    <label for="message_area">No more than 100 characters</label>
+                    <p>
+                      <textarea placeholder="Artist" id="message_area" maxlength="100" rows="6" cols="70"></textarea>
+                    </p>
+                    <span class="hint" id="textarea_message"></span>
+                  </form>
+                  -->
+            </div>
+            
+            <div class="function__genre-decade">
+                <div class="genre  animate__animated animate__fadeInUp">
+                    <div class="input-group select">
+                        <label for="js-frequency" class="sr-only"></label>
+                        <select id="js-frequency" class="js-frequency">
+                          <option value="weekly">Genre</option>
+                          <option value="fortnightly">/ Rock</option>
+                          <option value="monthly">/ Hip Hop</option>
+                          <option value="quarterly">/ Electronic</option>
+                          <option value="halfyearly">/ Folk, World & Country</option>
+                          <option value="yearly">/ Jazz</option>
+                        </select>
+                        <span class="select-chevron "></span>
+                      
+                    </div>
+                </div>
+                <div class="genre  animate__animated animate__fadeInUp">
+                    <div class="input-group select">
+                        <label for="js-frequency" class="sr-only"></label>
+                        <select id="js-frequency" class="js-frequency">
+                          <option value="weekly">Decade</option>
+                          <option value="fortnightly">/ 1950-60 рр</option>
+                          <option value="monthly">/ 1960-70 рр.</option>
+                          <option value="quarterly">/ 1970-80 рр.</option>
+                          <option value="halfyearly">/ 1980-90 рр.</option>
+                          <option value="yearly">/ 1990-00 рр.</option>
+                          <option value="yearly">/ 2000-10 рр.</option>
+                          <option value="yearly">/ 2010-20 рр</option>
+                          <option value="yearly">/ 2020-30 рр.</option>
+                        </select>
+                        <span class="select-chevron "></span>
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="function_country">
+                <div class="input-group select  animate__animated animate__fadeInUp">
+                    <label for="js-frequency" class="sr-only size "></label>
+                    <select id="js-frequency" class="js-frequency size">
+                      <option value="weekly">Country</option>
+                      <option value="fortnightly">/ Ukraine</option>
+                      <option value="monthly">/ USA</option>
+                      <option value="quarterly">/ Italy</option>
+                      <option value="halfyearly">/ France</option>
+                      <option value="yearly">/ England</option>
+                    </select>
+                    <span class="select-chevron "></span>
+                  
+                </div>
+            </div>
+            <button class="search">SEARCH</button>
+        </div>
+    </div>
+         <!--Products block-->
+        <div class="products">
+            <div class="product__cart">
+                <div class="cart-image">
+                    <div class="cart-favourite">
+                        <img class="cart__heart" src="img/heart-black.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="cart-description">
+                    <img class="cart__image" src="img/product1.png" alt="">
+                    <h2 class="decription_name">Let There Be Rock</h3>
+                    <h3 class="under-dercription_name">AC/DC</h3>
+                    <p class="description__info top_info"><i>Year:</i> 1990</p>
+                    <p class="description__info"><i>Style: </i>Punk, Dub, Funk</p>
+                    <p class="description__info"><i>Country: </i>USA</p>
+                </div>
+                <div class="wrapper  animate__animated animate__fadeInUp">
+                  <a class="button" href="#">Add <img class="wrapper__plus" src="img/plus.png" alt=""></a>
+                  
+              </div>
+              
+              <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+              <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                  <defs>
+                      <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                          <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                      </filter>
+                  </defs>
+              </svg>
+              
+            </div>
+            <div class="product__cart">
+              <div class="cart-image">
+                  <div class="cart-favourite">
+                      <img class="cart__heart" src="img/heart-black.png" alt="">
+                  </div>
+                  
+              </div>
+              <div class="cart-description">
+                  <img class="cart__image" src="img/product2.png" alt="">
+                  <h2 class="decription_name">Let There Be Rock</h3>
+                  <h3 class="under-dercription_name">AC/DC</h3>
+                  <p class="description__info top_info"><i>Year:</i> 1990</p>
+                  <p class="description__info"><i>Style: </i>Punk, Dub, Funk</p>
+                  <p class="description__info"><i>Country: </i>USA</p>
+              </div>
+              <div class="wrapper">
+                <a class="button  animate__animated animate__fadeInUp" href="#">Add <img class="wrapper__plus" src="img/plus.png" alt=""></a>
+                
+            </div>
+            
+            <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+            <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                        <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                    </filter>
+                </defs>
+            </svg>
+            
+          </div>
+          <div class="product__cart">
+            <div class="cart-image">
+                <div class="cart-favourite">
+                    <img class="cart__heart" src="img/heart-black.png" alt="">
+                </div>
+                
+            </div>
+            <div class="cart-description">
+                <img class="cart__image" src="img/product3.png" alt="">
+                <h2 class="decription_name">Let There Be Rock</h3>
+                <h3 class="under-dercription_name">AC/DC</h3>
+                <p class="description__info top_info"><i>Year:</i> 1990</p>
+                <p class="description__info"><i>Style: </i>Punk, Dub, Funk</p>
+                <p class="description__info"><i>Country: </i>USA</p>
+            </div>
+            <div class="wrapper">
+              <a class="button  animate__animated animate__fadeInUp" href="#">Add <img class="wrapper__plus" src="img/plus.png" alt=""></a>
+              
+          </div>
+          
+          <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+          <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                  <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                  </filter>
+              </defs>
+          </svg>
+          
+        </div>
+        <div class="product__cart">
+          <div class="cart-image">
+              <div class="cart-favourite">
+                  <img class="cart__heart" src="img/heart-black.png" alt="">
+              </div>
+              
+          </div>
+          <div class="cart-description">
+              <img class="cart__image" src="img/product4.png" alt="">
+              <h2 class="decription_name">Let There Be Rock</h3>
+              <h3 class="under-dercription_name">AC/DC</h3>
+              <p class="description__info top_info"><i>Year:</i> 1990</p>
+              <p class="description__info"><i>Style: </i>Punk, Dub, Funk</p>
+              <p class="description__info"><i>Country: </i>USA</p>
+          </div>
+          <div class="wrapper">
+            <a class="button  animate__animated animate__fadeInUp" href="#">Add <img class="wrapper__plus" src="img/plus.png" alt=""></a>
+            
+        </div>
+        
+        <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+        <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                    <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+            </defs>
+        </svg>
+        
+      </div>
+      <div class="product__cart">
+        <div class="cart-image">
+            <div class="cart-favourite">
+                <img class="cart__heart" src="img/heart-black.png" alt="">
+            </div>
+            
+        </div>
+        <div class="cart-description">
+            <img class="cart__image" src="img/product5.png" alt="">
+            <h2 class="decription_name">Let There Be Rock</h3>
+            <h3 class="under-dercription_name">AC/DC</h3>
+            <p class="description__info top_info"><i>Year:</i> 1990</p>
+            <p class="description__info"><i>Style: </i>Punk, Dub, Funk</p>
+            <p class="description__info"><i>Country: </i>USA</p>
+        </div>
+        <div class="wrapper">
+          <a class="button  animate__animated animate__fadeInUp" href="#">Add <img class="wrapper__plus" src="img/plus.png" alt=""></a>
+          
+      </div>
+      
+      <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+      <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+              <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+          </defs>
+      </svg>
+      
+    </div>
+    <div class="product__cart">
+      <div class="cart-image">
+          <div class="cart-favourite">
+              <img class="cart__heart" src="img/heart-black.png" alt="">
+          </div>
+          
+      </div>
+      <div class="cart-description">
+          <img class="cart__image" src="img/product6.png" alt="">
+          <h2 class="decription_name">Let There Be Rock</h3>
+          <h3 class="under-dercription_name">AC/DC</h3>
+          <p class="description__info top_info"><i>Year:</i> 1990</p>
+          <p class="description__info"><i>Style: </i>Punk, Dub, Funk</p>
+          <p class="description__info"><i>Country: </i>USA</p>
+      </div>
+      <div class="wrapper">
+        <a class="button  animate__animated animate__fadeInUp" href="#">Add <img class="wrapper__plus" src="img/plus.png" alt=""></a>
+        
+    </div>
+    
+    <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+    
+  </div>
+        </div>
+
+        <div class="container__footer-nav  animate__animated animate__fadeInUp">
+            <a class="button footer-but" href="">1</a>
+            <a class="button footer-but white-but" href="">2</a>
+            <a class="button footer-but white-but" href="">3</a>
+            <a class="button footer-but white-but" href="">...</a>
+            <a class="button footer-but white-but" href="">8</a>
+        </div>
+      </div>
+  </body>
+  <script src="script.js">
+  </script>
+</html>
